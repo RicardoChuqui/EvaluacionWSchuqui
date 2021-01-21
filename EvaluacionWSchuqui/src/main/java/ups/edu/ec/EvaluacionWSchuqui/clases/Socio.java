@@ -24,9 +24,7 @@ public class Socio implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-//   @GeneratedValue(strategy = GenerationType.IDENTITY)
-//   @Column (name="idSocio")
-//    private int idSocio;
+
     @Id
     @Column(name = "cedulaSocio")
     private String cedulaSocio;
@@ -37,33 +35,10 @@ public class Socio implements Serializable {
     @Column(name = "apellidoSocio")
     private String apelidosSocio;
 
-    @Column(name = "edadSocio")
-    private int edadSocio;
-
-    @Column(name = "provinciaSocio")
-    private String provinciaSocio;
-
     @Column(name = "ciudadSocio")
     private String ciudadSocio;
 
-    @Column(name = "direccionSocio")
-    private String direccionSocio;
-
-    @Column(name = "telefonoSocio")
-    private String telefonoFijoSocio;
-
-    @Column(name = "celularSocio")
-    private String cedularSocio;
-    
-    @Column(name = "correoSocio")
-	private String correo;
-	
-    @Column(name = "claveSocio")
-    private String clave;
-
-    @Column(name = "estadoCivilSocio")
-    private String estadoCiviilSocio;
-
+ 
     @OneToOne(mappedBy = "socio")
     private Cuenta cuenta;
 
@@ -100,21 +75,6 @@ public class Socio implements Serializable {
         this.apelidosSocio = apelidosSocio;
     }
 
-    public int getEdadSocio() {
-        return edadSocio;
-    }
-
-    public void setEdadSocio(int edadSocio) {
-        this.edadSocio = edadSocio;
-    }
-
-    public String getProvinciaSocio() {
-        return provinciaSocio;
-    }
-
-    public void setProvinciaSocio(String provinciaSocio) {
-        this.provinciaSocio = provinciaSocio;
-    }
 
     public String getCiudadSocio() {
         return ciudadSocio;
@@ -124,47 +84,9 @@ public class Socio implements Serializable {
         this.ciudadSocio = ciudadSocio;
     }
 
-    public String getDireccionSocio() {
-        return direccionSocio;
-    }
-
-    public void setDireccionSocio(String direccionSocio) {
-        this.direccionSocio = direccionSocio;
-    }
-
-    public String getTelefonoFijoSocio() {
-        return telefonoFijoSocio;
-    }
-
-    public void setTelefonoFijoSocio(String telefonoFijoSocio) {
-        this.telefonoFijoSocio = telefonoFijoSocio;
-    }
-
-    public String getCedularSocio() {
-        return cedularSocio;
-    }
-
-    public void setCedularSocio(String cedularSocio) {
-        this.cedularSocio = cedularSocio;
-    }
-
-    public String getEstadoCiviilSocio() {
-        return estadoCiviilSocio;
-    }
-
-    public void setEstadoCiviilSocio(String estadoCiviilSocio) {
-        this.estadoCiviilSocio = estadoCiviilSocio;
-    }
-
 	@Override
 	public String toString() {
 		return "Socio [cedulaSocio=" + cedulaSocio + ", nombresSocio=" + nombresSocio + ", apelidosSocio="
-				+ apelidosSocio + ", edadSocio=" + edadSocio + ", provinciaSocio=" + provinciaSocio + ", ciudadSocio="
-				+ ciudadSocio + ", direccionSocio=" + direccionSocio + ", telefonoFijoSocio=" + telefonoFijoSocio
-				+ ", cedularSocio=" + cedularSocio + ", correo=" + correo + ", clave=" + clave + ", estadoCiviilSocio="
-				+ estadoCiviilSocio + ", cuenta=" + cuenta + "]";
+				+ apelidosSocio + ", ciudadSocio=" + ciudadSocio + ", cuenta=" + cuenta + "]";
 	}
-
-   
-
 }

@@ -238,19 +238,4 @@ public class GestionBancariaON {
         return correcto;
     }
 	
-	/*
-	 * metodo que retornar un socio llamando al metodo  login por medio de si correo y clave de su clase socioDao
-	 */
-	public Socio buscarPersona(String correo, String clave) throws Exception {
-		return socioDao.login(correo, clave);
-
-	}
-
-	/*
-	 * metodo que retornar un socio llamando al metodo  buscarCorreo por medio de si correo de su clase socioDao
-	 */
-	public Socio BuscarCorreo(String correo) throws Exception {
-		return socioDao.buscarCorreo(correo);
-	}
-
 }

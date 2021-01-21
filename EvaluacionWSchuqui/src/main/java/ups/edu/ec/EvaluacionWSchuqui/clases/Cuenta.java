@@ -43,7 +43,9 @@ public class Cuenta implements Serializable{
      
      @Column(name="saldo")
      private double saldo;
-
+     
+     @Column(name="mesesPlazo")
+     private  int mesesPlazo;
     public double getSaldo() {
         return saldo;
     }
@@ -83,6 +85,15 @@ public class Cuenta implements Serializable{
     public void setSocio(Socio socio) {
         this.socio = socio;
     }
+
+    
+	public int getMesesPlazo() {
+		return mesesPlazo;
+	}
+
+	public void setMesesPlazo(int mesesPlazo) {
+		this.mesesPlazo = mesesPlazo;
+	}
 
 	@Override
 	public String toString() {
