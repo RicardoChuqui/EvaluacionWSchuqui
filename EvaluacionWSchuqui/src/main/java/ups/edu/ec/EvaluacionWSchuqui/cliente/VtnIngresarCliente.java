@@ -110,11 +110,9 @@ public class VtnIngresarCliente extends JFrame {
 		// TODO Auto-generated method stub
 		Cuenta c = new Cuenta();
 		Socio s = new Socio();
-		
 		s.setCedulaSocio(txtDNI.getText());
 		c.setIdCuenta(txtNcuenta.getText());
 		c.setSaldo(Integer.parseInt(txtCredito.getText()));
 		c.setMesesPlazo(Integer.parseInt(txtMplazo.getText()));
-
 }	
 }
